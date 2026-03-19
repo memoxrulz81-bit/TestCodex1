@@ -1,0 +1,17 @@
+@Portal_Api_Host = https://localhost:7001
+@AdminAccessToken = REPLACE_WITH_ENTRA_ACCESS_TOKEN
+
+GET {{Portal_Api_Host}}/api/test/public
+Accept: application/json
+
+###
+
+GET {{Portal_Api_Host}}/api/test/me
+Accept: application/json
+Authorization: Bearer {{AdminAccessToken}}
+
+###
+
+GET {{Portal_Api_Host}}/api/test/admin
+Accept: application/json
+Authorization: Bearer {{AdminAccessToken}}
